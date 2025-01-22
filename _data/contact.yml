@@ -17,6 +17,7 @@
 - type: tistory-blog
   icon: "fa-solid fa-book"
   url: "https://juyoung-jung.tistory.com"
+  
 # - type: rss
 #   icon: "fas fa-rss"
 #   noblank: true
