@@ -399,19 +399,7 @@ header {
   }
 }
 
-@mixin slide-out {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(-#{v.$topbar-height});
-    opacity: 0;
-  }
-}
-
-// @keyframes slide-out {
+// @mixin slide-out {
 //   0% {
 //     transform: translateY(0);
 //     opacity: 1;
@@ -422,6 +410,13 @@ header {
 //     opacity: 0;
 //   }
 // }
+
+// 추가 
+@mixin slide-out {
+  transform: translateY(-#{v.$topbar-height});
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
 
 @-webkit-keyframes slide-in {
   @include slide-in;
