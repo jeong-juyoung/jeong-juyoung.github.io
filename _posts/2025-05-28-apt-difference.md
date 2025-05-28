@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu apt 와 apt-get 차이 "
 # date: 2025-05-26 23:00:00 +0900
-categories: [Linux, Linux]
+categories: [Tech, Linux]
 tags: [ubuntu, apt, apt-get, CLI]
 math: true
 toc: true
