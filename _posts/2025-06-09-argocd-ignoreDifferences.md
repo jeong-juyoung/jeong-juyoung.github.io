@@ -11,7 +11,7 @@ pin: true
 #   alt: image alternative text
 ---
 
-> 기존에 온프레미스 환경에서만 Kubernetes를 관리했었다가, 최근 Azure에서 관리하면서 겪었떤 상황 공유 역시 환경마다 색다롭다!
+> 기존에 온프레미스 환경에서만 Kubernetes를 관리했었다가, 최근 Azure에서 관리하면서 겪었던 상황 공유 // 역시 환경마다 색다롭다!
 
 ## 문제 상황
 - ArgoCD에서 cert-manager-webhook OutofSync Loop 현상 발생 
@@ -20,8 +20,9 @@ pin: true
 ## 원인 분석
 - 이 문제의 주요 원인은 AKS/Azure가 특정 필드를 자동으로 수정하기 때문
 
-- **control-plane** 관련 `namespaceSelector kubernetes.azure.com/managedby` 관련 필드
-Azure는 관리형 Kubernetes 서비스의 특성상 이러한 필드들을 자동으로 추가하거나 수정하는데, 이것이 ArgoCD의 GitOps 방식과 충돌하게 됨
+- **control-plane** 관련 `namespaceSelector`
+- `kubernetes.azure.com/managedby` 관련 필드 
+- Azure는 관리형 Kubernetes 서비스의 특성상 이러한 필드들을 자동으로 추가하거나 수정하는데, 이것이 ArgoCD의 GitOps 방식과 충돌하게 됨
 
 ## 해결 방법
 1. `Ignore Differences` 설정
