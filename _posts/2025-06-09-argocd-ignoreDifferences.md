@@ -1,6 +1,6 @@
 ---
 title: "ArgoCD에서 cert-manager-webhook OutofSync Loop 현상 해결하기"
-# date: 2025-05-26 23:00:00 +0900
+#date: 2025-05-26 23:00:00 +0900
 categories: [DevOps, Kubernetes]
 tags: [argocd, cert-manager, kubernetes, aks, azure, webhook, sync, gitops]
 math: true
