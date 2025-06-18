@@ -1,5 +1,5 @@
 ---
-title: "ArgoCD에서 cert-manager-webhook OutofSync Loop 현상 해결하기"
+title: "Azure AKS에서 ArgoCD cert-manager-webhook OutofSync Loop 해결기"
 #date: 2025-05-26 23:00:00 +0900
 categories: [DevOps, Kubernetes]
 tags: [argocd, cert-manager, kubernetes, aks, azure, webhook, sync, gitops]
@@ -11,7 +11,7 @@ pin: true
 #   alt: image alternative text
 ---
 
-> 기존에 온프레미스 환경에서만 Kubernetes를 관리했었다가, 최근 Azure에서 관리하면서 겪었던 상황 공유 // 역시 환경마다 색다롭다!
+> 3년간 온프레미스 Kubernetes 환경에서만 ArgoCD를 운영해왔던 나에게, Azure AKS 환경은 새로운 도전이었다. "어차피 Kubernetes니까 비슷하겠지"라는 안일한 생각으로 기존 ArgoCD 설정을 그대로 AKS에 적용했다가... 에러 발견 !
 
 ## 문제 상황
 - ArgoCD에서 cert-manager-webhook OutofSync Loop 현상 발생 
