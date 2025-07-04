@@ -1,0 +1,108 @@
+# 시스템 정보 확인
+pveversion -v
+클러스터 구성
+1. 클러스터 생성 (첫 번째 노드)
+
+Proxmox 웹 인터페이스 접속
+Datacenter → Cluster → Create Cluster 클릭
+클러스터 설정:
+Cluster Name: proxmox-cluster
+Ring 0 Address: 16.8.52.225 (첫 번째 노드 IP)
+
+Create 클릭
+
+2. 클러스터 가입 (두 번째 노드)
+
+첫 번째 노드에서 Join Information 클릭
+표시된 정보 복사:
+pvecm add 16.8.52.225 -fingerprint XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX
+
+두 번째 노드에서 Join Cluster 클릭
+복사한 정보 붙여넣기
+Password: 첫 번째 노드의 root 패스워드 입력
+Join 클릭
+
+3. 클러스터 상태 확인
+bash# 클러스터 상태 확인
+pvecm status
+
+# 클러스터 노드 목록
+pvecm nodes
+
+# 클러스터 정보 확인
+cat /etc/pve/corosync.conf
+주요 설정 및 최적화
+1. 스토리지 설정
+bash# 스토리지 풀 확인
+pvesm status
+
+# 기본 스토리지 설정
+pvesm set local --content iso,vztmpl,snippets
+pvesm set local-lvm --content images,rootdir
+2. 네트워크 설정
+bash# 네트워크 인터페이스 확인
+ip addr show
+
+# 브리지 설정 확인
+cat /etc/network/interfaces
+3. 방화벽 설정
+bash# 방화벽 상태 확인
+pve-firewall status
+
+# 기본 방화벽 설정
+echo "OPTIONS: enable=1" > /etc/pve/firewall/cluster.fw
+결과 및 활용
+구축 완료 후 확인사항
+✅ 성공적으로 구축된 환경:
+
+2노드 Proxmox VE 클러스터
+고가용성 스토리지 설정
+웹 기반 관리 인터페이스
+VM/컨테이너 배포 준비 완료
+
+활용 계획
+학습 환경 구축:
+
+Kubernetes 클러스터 배포 테스트
+다양한 Linux 배포판 테스트
+네트워크 시나리오 실험
+
+DevOps 실습:
+
+CI/CD 파이프라인 구축
+모니터링 스택 배포
+백업 및 복구 프로세스 테스트
+
+트러블슈팅
+자주 발생하는 문제들
+1. 네트워크 접속 불가
+bash# 네트워크 인터페이스 재시작
+systemctl restart networking
+
+# 방화벽 확인
+iptables -L -n
+2. 클러스터 가입 실패
+bash# 시간 동기화 확인
+timedatectl status
+
+# 클러스터 초기화 (필요시)
+pvecm delnode nodename
+3. 웹 인터페이스 접속 불가
+bash# Proxmox 웹 서비스 재시작
+systemctl restart pveproxy
+systemctl restart pvedaemon
+
+## 회고
+### 배운 점들
+1. 가상화 기술 이해도 향상
+
+하이퍼바이저 레벨에서의 리소스 관리
+네트워크 가상화 개념 (Bridge, VLAN)
+스토리지 가상화 (LVM, ZFS)
+
+### 다음 단계
+1. 자동화 구축
+
+Terraform으로 VM 프로비저닝
+Ansible로 설정 관리
+CI/CD 파이프라인 통합
