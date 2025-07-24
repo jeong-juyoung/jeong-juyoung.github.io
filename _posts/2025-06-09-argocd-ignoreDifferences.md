@@ -5,7 +5,7 @@ categories: [DevOps, Kubernetes]
 tags: [argocd, cert-manager, kubernetes, aks, azure, webhook, sync, gitops]
 math: true
 toc: true
-pin: true
+pin: false
 # image:
 #   path: thumbnail.png
 #   alt: image alternative text

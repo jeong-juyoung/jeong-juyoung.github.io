@@ -51,7 +51,7 @@ DevOps, Kubernetes, Java, Elasticsearch 관련 기술 포스팅을 주로 다뤘
 **2025.05 - 현재** | Application Consulting & Development **프로**
 
 - Azure Kubernetes Cluster 구축 및 운영
-- 로그 모니터링 시스템 구축 (OpenTelemetry, Alloy, Tempo)
+- 로그 모니터링 시스템 구축 (OpenTelemetry, Alloy, Loki ,Tempo)
 - 인도법인과 해외 고객 대상 글로벌 협업
 - 자사 서비스 운영 및 유지보수
 

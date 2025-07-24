@@ -5,7 +5,7 @@ categories: [Tech, Linux]
 tags: [proxmox, virtualization, cluster, on-premise, hypervisor]
 math: true
 toc: true
-pin: true
+pin: false
 ---
 
 > 최근 회사에 사용하지 않는 물리 서버 4대가 있어서, 이를 가상화 환경으로 활용하면 좋겠다는 생각이 들어 Proxmox VE 클러스터를 구축하게 되었다.

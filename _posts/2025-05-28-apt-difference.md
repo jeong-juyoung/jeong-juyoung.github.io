@@ -5,7 +5,7 @@ categories: [Tech, Linux]
 tags: [ubuntu, apt, apt-get, CLI]
 math: true
 toc: true
-pin: true
+pin: false
 # image:
 #   path: thumbnail.png
 #   alt: image alternative text

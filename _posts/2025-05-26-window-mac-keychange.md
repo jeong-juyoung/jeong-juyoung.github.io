@@ -5,7 +5,7 @@ categories: [Tech, Windows]
 tags: [Windows11, 맥북, 키보드, 키배열, 단축키, PowerToys, 키맵핑]
 math: true
 toc: true
-pin: true
+pin: false
 # image:
 #   path: thumbnail.png
 #   alt: image alternative text
