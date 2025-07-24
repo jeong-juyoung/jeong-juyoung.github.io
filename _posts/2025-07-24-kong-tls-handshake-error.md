@@ -26,14 +26,14 @@ Kong을 AKS 환경에서 운영하던 중 다음과 같은 TLS handshake error�
 2025/07/23 05:54:05 http: TLS handshake error from 10.244.2.23:33016: EOF
 2025/07/23 05:54:06 http: TLS handshake error from 10.244.2.23:33028: EOF
 2025/07/23 05:54:06 http: TLS handshake error from 10.244.2.23:33030: EOF
-2025-07-23T05:54:15Z	info	controller-runtime.certwatcher	Updated current TLS certificate	{"v": 0}
+2025-07-23T05:54:15Z info	controller-runtime.certwatcher Updated current TLS certificate {"v": 0}
 ```
 
 ## 원인 분석
 
 ### 1. 에러가 발생하는 IP 주소 확인
 
-에러가 발생하는 IP 주소를 확인해보니 `konnectivity-agent` 파드들이었음음
+에러가 발생하는 IP 주소를 확인해보니 `konnectivity-agent` 파드들이었음
 
 ```bash
 # 10.244.0.233 확인
@@ -98,14 +98,14 @@ name: validations.kong.konghq.com
 
 Kong 서비스와 엔드포인트를 확인해보니 포트 불일치가 발견!
 
-**서비스는 443 포트:**
+**서비스는 443 포트**
 ```bash
 ubuntu@aks-dev-cluster:~/aims-dev-helm/kong$ kubectl get svc -n kong
 NAME                           TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)                      AGE
 kong-kong-validation-webhook   ClusterIP      10.0.204.214   <none>           443/TCP                      48d
 ```
 
-**실제 엔드포인트는 8080 포트:**
+**실제 엔드포인트는 8080 포트**
 ```bash
 ubuntu@aks-dev-cluster:~/aims-dev-helm/kong$ kubectl get endpoints -n kong
 NAME                           ENDPOINTS                               AGE
@@ -124,7 +124,7 @@ admissionWebhook:
     enabled: true  # false에서 true로 변경
 ```
 
-이 설정을 통해:
+이 설정을 통해
 1. Kong admission webhook이 올바른 TLS 인증서를 사용하게 된다.
 2. API Server와 Kong 간의 TLS handshake가 정상적으로 이루어진다.
 3. 포트 불일치 문제가 해결된다 
