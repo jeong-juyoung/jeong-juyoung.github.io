@@ -17,7 +17,7 @@ TraceQL의 `rate()` 함수를 사용하여 메트릭을 조회하려고 시도�
 ```
 failed to execute traceql query rate status 500 internal server error error finding generator in querier.queryRangeRecent empty ring
 ```
-![TraceQL Rate 함수 오류](/assets/img/for_post/2025-07-309-traceql-error.png){: .normal }<br>
+![TraceQL Rate 함수 오류](/assets/img/for_post/2025-07-30-traceql-error.png){: .normal }<br>
 
 ## 원인 분석
 
