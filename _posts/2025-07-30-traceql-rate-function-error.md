@@ -1,7 +1,7 @@
 ---
 title: Grafana Tempo 트레이스 조회 오류 해결하기 - Metrics Generator 설정
 date: 2025-07-30 10:00:00 +0900
-categories: [Kubernetes]
+categories: [DevOps, Kubernetes]
 tags: [grafana, tempo, traceql, metrics-generator, observability, trace]
 math: false
 toc: true
