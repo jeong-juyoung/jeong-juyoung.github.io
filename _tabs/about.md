@@ -14,7 +14,6 @@ toc: true
 ---
 
 ✉️ **Email**: jungjuyoung1314@gmail.com  
-🏠 **Location**: 서울 송파구
 
 ## About Me
 
