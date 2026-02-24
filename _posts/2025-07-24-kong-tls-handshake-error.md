@@ -1,7 +1,7 @@
 ---
 title: Kong Admission Webhook TLS Handshake Error 해결하기
 date: 2025-07-24 10:00:00 +0900
-categories: [Kubernetes]
+categories: [DevOps, Kubernetes]
 tags: [kubernetes, kong, admission-webhook, tls, troubleshooting]
 math: false
 toc: true
