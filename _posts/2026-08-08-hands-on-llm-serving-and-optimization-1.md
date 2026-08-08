@@ -6,9 +6,7 @@ categories: [dev, llm]
 tags: [LLM, serving, optimization, vLLM, model-serving, inference]
 ---
 
-*Hands-On LLM Serving and Optimization* 을 읽으며 정리한 내용이다.
-
-LLM을 제대로 공부해본 적이 없었는데, 모르는 개념이 많아서 쉽진 않지만, 그래도 읽은 만큼 정리해두려고 한다.
+*서종호(가시다)님의 Hands-On LLM Serving and Optimization Study* 을 진행중이고, 책 내용을 읽으며 정리한 내용이다.
 
 ---
 

@@ -6,7 +6,7 @@ categories: [dev, llm]
 tags: [LLM, transformer, KV-cache, vLLM, attention, serving, inference]
 ---
 
-*Hands-On LLM Serving and Optimization* 을 읽으며 정리한 내용이다.
+*서종호(가시다)님의 Hands-On LLM Serving and Optimization Study* 을 진행중이고, 책 내용을 읽으며 정리한 내용이다.
 
 ---
 
